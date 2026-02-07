@@ -31,3 +31,5 @@ This project is a Flask-based web application developed to enhance trust in e-co
 ### Step 1: Clone the repository
 ```bash
 git clone https://github.com/Abdulraheem1513/Ecommerce-trust-verification-system.git
+
+Note: This command must be run in a terminal (Command Prompt, PowerShell, or VS Code terminal), not in a web browser.
