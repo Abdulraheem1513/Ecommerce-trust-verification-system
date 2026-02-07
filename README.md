@@ -22,6 +22,12 @@ This project is a Flask-based web application developed to enhance trust in e-co
 - `instance/` – SQLite database storage
 
 ## How to Run the Application
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Abdulraheem1513/Ecommerce-trust-verification-system.git
+
+### Prerequisites
+- Python 3.9 or higher
+- Git
+- Virtual environment support (venv)
+
+### Step 1: Clone the repository
+```bash
+git clone https://github.com/Abdulraheem1513/Ecommerce-trust-verification-system.git
