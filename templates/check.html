@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="title">Check Seller</h1>
+  <p class="subtitle">Type a seller name (or phone/link) to check trust score.</p>
+
+  <form class="form" method="POST">
+    <input name="query" placeholder="e.g. John Store / +234... / instagram link" required>
+    <button type="submit">Check</button>
+  </form>
+
+  {% if result %}
+    <div class="result">
+      <h2>Result</h2>
+      <p><b>Query:</b> {{ result.query }}</p>
+      <p><b>Score:</b> {{ result.score }}/100</p>
+      <p><b>Status:</b> <span class="badge">{{ result.status }}</span></p>
+
+      {% if result.matches and result.matches|length > 0 %}
+        <h3>Related Reports Found</h3>
+        <ul>
+          {% for r in result.matches %}
+            <li><b>{{ r.seller }}</b> — {{ r.details }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No reports found for this seller.</p>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}

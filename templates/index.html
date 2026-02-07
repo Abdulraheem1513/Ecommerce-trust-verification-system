@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="title">E-Commerce Trust System</h1>
+  <p class="subtitle">Check seller trust score, report suspicious activity, and improve online safety.</p>
+
+  <div class="cards">
+    <a class="card" href="{{ url_for('check') }}">
+      <h3>Check Seller</h3>
+      <p>Enter seller name/phone/link to get a trust score.</p>
+    </a>
+
+    <a class="card" href="{{ url_for('report') }}">
+      <h3>Report Scam</h3>
+      <p>Submit scam reports to help warn other users.</p>
+    </a>
+
+    <a class="card" href="{{ url_for('about') }}">
+      <h3>About</h3>
+      <p>Learn how the trust score is calculated.</p>
+    </a>
+  </div>
+{% endblock %}

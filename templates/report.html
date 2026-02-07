@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="title">Report Scam</h1>
+  <p class="subtitle">Submit a report so others can avoid scams.</p>
+
+  <form class="form" method="POST">
+    <input name="seller" placeholder="Seller name / phone / link" required>
+    <textarea name="details" placeholder="What happened? (payment, chat, delivery, proof)" rows="5" required></textarea>
+    <button type="submit">Submit Report</button>
+  </form>
+
+  {% if message %}
+    <div class="success">{{ message }}</div>
+  {% endif %}
+{% endblock %}

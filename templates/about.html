@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="title">About</h1>
+  <p class="subtitle">
+    This system helps users estimate seller trust using simple signals.
+  </p>
+
+  <div class="panel">
+    <h3>How scoring works (simple version)</h3>
+    <ul>
+      <li>Start with 100 points.</li>
+      <li>If scam reports match the seller name/link, score reduces.</li>
+      <li>More matching reports = lower trust score.</li>
+    </ul>
+  </div>
+{% endblock %}

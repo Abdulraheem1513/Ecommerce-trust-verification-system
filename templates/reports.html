@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="margin-bottom: 10px;">Public Scam Reports</h1>
+<p style="margin-bottom: 25px; opacity: 0.8;">
+  These reports are submitted by users to warn others. Use <b>Check Seller</b> to verify a seller before paying.
+</p>
+
+{% if reports and reports|length > 0 %}
+
+  <div style="display: grid; gap: 15px;">
+    {% for r in reports %}
+      <div style="padding: 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px;">
+        <div style="display:flex; justify-content:space-between; gap: 12px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 18px; font-weight: 700;">Seller: {{ r.seller }}</div>
+            <div style="opacity: 0.75; font-size: 13px;">
+              {{ r.created_at.strftime("%Y-%m-%d %H:%M") if r.created_at else "" }}
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 12px; line-height: 1.5; opacity: 0.95;">
+          {{ r.details }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+{% else %}
+
+  <div style="padding: 16px; border: 1px dashed rgba(255,255,255,0.25); border-radius: 12px;">
+    No reports yet. Be the first to submit one on the <b>Report Scam</b> page.
+  </div>
+
+{% endif %}
+
+{% endblock %}

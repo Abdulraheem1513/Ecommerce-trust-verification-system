@@ -1,0 +1,19 @@
+body { margin:0; font-family: Arial, sans-serif; background:#0b0f14; color:#e9eef5; }
+.nav { display:flex; justify-content:space-between; padding:18px 28px; background:#0f1620; position:sticky; top:0; }
+.nav a { color:#e9eef5; text-decoration:none; margin-left:18px; }
+.nav a:hover { text-decoration:underline; }
+.logo { font-weight:700; letter-spacing:1px; }
+.container { max-width:1000px; margin:60px auto; padding:0 18px; }
+.title { font-size:42px; margin:0 0 10px; }
+.subtitle { opacity:.8; margin:0 0 28px; }
+.cards { display:flex; gap:18px; flex-wrap:wrap; margin-top:25px; }
+.card { flex:1; min-width:220px; background:#121b26; padding:20px; border-radius:14px; border:1px solid #1f2a38; display:block; color:#e9eef5; }
+.card:hover { border-color:#2f425a; }
+.form { display:flex; gap:10px; flex-direction:column; max-width:520px; }
+input, textarea { padding:12px; border-radius:10px; border:1px solid #223043; background:#0f1620; color:#e9eef5; }
+button { padding:12px; border-radius:10px; border:0; background:#2d7ef7; color:white; cursor:pointer; font-weight:600; }
+button:hover { opacity:.9; }
+.result, .panel { margin-top:22px; padding:18px; border-radius:14px; background:#101826; border:1px solid #1f2a38; }
+.success { margin-top:18px; padding:14px; border-radius:12px; background:#0f2a18; border:1px solid #1f5a38; }
+.badge { padding:4px 10px; border-radius:999px; background:#1d2a3a; border:1px solid #2b3e57; }
+.footer { text-align:center; padding:30px 0; opacity:.7; }
